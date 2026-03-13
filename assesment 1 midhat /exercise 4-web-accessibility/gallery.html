@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- Declares the document as HTML5 -->
+<html lang="en">
+<head>
+  <!-- Character encoding for proper text display -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title shown in the browser tab -->
+  <title>The Wondering Photographer</title>
+
+  <style>
+    /* Reset default browser spacing and set box-sizing to border-box */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main body styling */
+    body {
+      background: linear-gradient(to bottom, #f8ede3, #dfd3c3); /* Light gradient background */
+      font-family: Arial, sans-serif; /* Base font for body */
+      max-width: 500px; /* Limit page width for readability */
+      margin: 0 auto; /* Center the page horizontally */
+      padding-bottom: 30px; /* Space at bottom of page */
+    }
+
+    /* Header Swirl Section */
+    .swirl {
+      text-align: center; /* Center the SVG */
+      padding: 20px 0 10px; /* Spacing around the swirl */
+    }
+
+    /* SVG styling inside header swirl */
+    .swirl svg {
+      width: 260px; /* Width of the swirl */
+      height: 50px; /* Height of the swirl */
+    }
+
+    /* Cart Bar */
+    .cart-bar {
+      text-align: right; /* Align cart icon to right */
+      padding: 8px 20px; /* Spacing around the cart bar */
+    }
+
+    /* Cart icon styling */
+    .cart-bar span {
+      font-size: 26px; /* Large cart icon */
+      cursor: pointer; /* Cursor changes to pointer on hover */
+    }
+
+    /* Photo Card Container */
+    .photo-card {
+      background: #ffffff; /* White card background */
+      margin: 18px; /* Space around each card */
+      border-radius: 12px; /* Rounded corners */
+      overflow: hidden; /* Hide overflow content */
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Soft shadow */
+      transition: transform 0.3s ease; /* Smooth hover animation */
+    }
+
+    /* Photo Card Hover Effect */
+    .photo-card:hover {
+      transform: translateY(-4px); /* Slight lift on hover */
+    }
+
+    /* Photo inside Card */
+    .photo-card img {
+      width: 100%; /* Fill card width */
+      height: 280px; /* Fixed height for consistency */
+      object-fit: cover; /* Crop image to fit without distortion */
+      display: block; /* Remove inline spacing */
+    }
+
+    /* Caption inside Photo Card */
+    .photo-card .caption {
+      background-color: #fefae0; /* Light cream background for caption */
+      color: #344e41; /* Dark green text */
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+      line-height: 1.5; /* Improve readability */
+    }
+
+    /* Add to Basket Button */
+    .photo-card .add-btn {
+      background-color: #344e41; /* Dark green button */
+      color: white; /* White text */
+      border: none;
+      font-size: 12px;
+      padding: 6px 12px;
+      margin: 10px;
+      border-radius: 20px; /* Rounded button */
+      cursor: pointer; /* Pointer cursor */
+      transition: background 0.3s ease; /* Smooth hover color change */
+    }
+
+    /* Add to Basket Button Hover Effect */
+    .photo-card .add-btn:hover {
+      background-color: #588157; /* Lighter green on hover */
+    }
+
+    /* Footer Section */
+    footer {
+      margin-top: 20px; /* Space above footer */
+      padding: 15px;
+      text-align: center; /* Center content */
+      background-color: #344e41; /* Dark green background */
+      color: white; /* White text */
+      border-radius: 10px 10px 0 0; /* Rounded top corners */
+    }
+
+    /* Footer copyright */
+    footer .copyright {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Footer navigation list */
+    footer ul {
+      list-style: none; /* Remove bullet points */
+    }
+
+    /* Footer navigation items */
+    footer ul li {
+      display: inline; /* Display inline for horizontal menu */
+      margin: 0 10px; /* Space between links */
+    }
+
+    /* Footer links styling */
+    footer ul li a {
+      color: #fefae0; /* Cream color links */
+      text-decoration: none; /* Remove underline */
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* Footer links hover effect */
+    footer ul li a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Swirl Section -->
+  <div class="swirl">
+    <svg viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <!-- Curved path line for decorative swirl -->
+      <path d="M10 25 Q30 5 50 25 Q70 45 90 25 Q110 5 130 25 Q150 45 170 25 Q190 5 210 25 Q230 45 250 25"
+        stroke="#344e41" stroke-width="2.2" fill="none"/>
+      <!-- Decorative circles along the swirl -->
+      <circle cx="130" cy="35" r="4" fill="#344e41"/>
+      <circle cx="10" cy="25" r="3" fill="#344e41"/>
+      <circle cx="250" cy="25" r="3" fill="#344e41"/>
+    </svg>
+  </div>
+
+  <!-- Cart Bar -->
+  <div class="cart-bar">
+    <span>🛒</span> <!-- Shopping cart icon -->
+  </div>
+
+  <!-- Photo Cards Section -->
+  <!-- Each photo card contains an image, caption, and "Add to basket" button -->
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80" alt="Greenland coast"/>
+    <div class="caption">
+      This was from a fabulous trip to the coast of Greenland with my family. The water was lovely — but very cold!
+    </div>
+    <button class="add-btn">Add to basket</button>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=700&q=80" alt="Golden Gate Bridge"/>
+    <div class="caption">
+      A picture of the Golden Gate Bridge. New York! New York!
+    </div>
+    <button class="add-btn">Add to basket</button>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=700&q=80" alt="Glacier valley"/>
+    <div class="caption">
+      Another great photo from Greenland. It's a river valley where a glacier used to be.
+    </div>
+    <button class="add-btn">Add to basket</button>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=700&q=80" alt="Waterfall"/>
+    <div class="caption">
+      The waterfall made such a lovely sound. I could have fallen asleep!
+    </div>
+    <button class="add-btn">Add to basket</button>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p class="copyright">Copyright The Wondering Photographer 2018.</p>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About me</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
